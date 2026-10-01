@@ -35,6 +35,8 @@ class Post(models.Model):
         choices=Status,
         default=Status.DRAFT
     )
+    objects = models.Manager() # O gerente padrão.
+    published = PublishedManeger() # Nosso gerente personalizado.
 
     
     class Meta:
