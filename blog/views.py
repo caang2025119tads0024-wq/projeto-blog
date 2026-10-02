@@ -2,9 +2,22 @@ from django.core.paginator import EmptyPage,Paginator, PageNotAnInteger
 from django.shortcuts import get_object_or_404, render
 from .models import Post
 from django.http import Http404
+from django.views.generic import ListView
+from .forms import EmailPostForm
 
 # Create your views here.
 
+class PostListView(ListView):
+    """
+    Visualização alternativa da lista de posts
+    """
+    queryset = Post.published.all()
+    context_object_name = 'posts'
+    paginate_by = 3
+    template_name = 'blog/post/list.html'
+    
+
+"""
 def post_list(request):
     post_list = Post.published.all()
     # Paginação com 3 posts por página
@@ -24,6 +37,7 @@ def post_list(request):
         'blog/post/list.html',
         {'posts':posts}
     )
+"""
 
 
 def post_detail(request, year, month, day, post):
@@ -38,4 +52,31 @@ def post_detail(request, year, month, day, post):
         request,
         'blog/post/detail.html',
         {'post': post}
+    )
+
+
+def post_share(request, pos_id):
+    # Recuperar postagem pelo id
+    post = get_object_or_404(
+        Post,
+        id=pos_id,
+        status=Post.Status.PUBLISHED
+    )
+    
+    if request.method == 'POST':
+        # Formulario foi submetido
+        form = EmailPostForm(request.POST)
+        if form.is_valid():
+            # Campos do formulário passaram na validação
+            cd = form.cleaned_data
+            # ... enviar e-mail
+    else:
+        form = EmailPostForm()
+    return render(
+        request,
+        'blog/post/share.html',
+        {
+            'post': post,
+            'form': form
+        }
     )
