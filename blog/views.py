@@ -1,10 +1,11 @@
 from django.core.paginator import EmptyPage,Paginator, PageNotAnInteger 
 from django.shortcuts import get_object_or_404, render
-from .models import Post
+from django.views.decorators.http import require_POST
 from django.http import Http404
 from django.views.generic import ListView
-from .forms import EmailPostForm
+from .forms import EmailPostForm, CommentForm
 from django.core.mail import send_mail
+from .models import Post
 
 # Create your views here.
 
@@ -49,10 +50,18 @@ def post_detail(request, year, month, day, post):
       publish__year=year,
       publish__month=month,
       publish__day=day)
+    # Lista de comentários ativos para este post
+    comments = post.comments.filter(active=True)
+    # Formulário para os usuários comentarem
+    form = CommentForm()
     return render(
         request,
         'blog/post/detail.html',
-        {'post': post}
+        {
+        'post': post,
+        'comments': comments,
+        'form': form
+        }
     )
 
 
@@ -100,5 +109,32 @@ def post_share(request, post_id):
             'post': post,
             'form': form,
             'sent': sent
+        }
+    )
+
+@require_POST
+def post_comment(request, post_id):
+    post = get_object_or_404(
+        Post,
+        id=post_id,
+        status=Post.Status.PUBLISHED
+    )
+    comment = None 
+    # Um comentário foi postado
+    form = CommentForm(data=request.POST)
+    if form.is_valid():
+        # Crie um objeto Comment sem salvá-lo no banco de dados
+        comment = form.save(commit=False)
+        # Atribua o post atual ao comentário
+        comment.post = post
+        # Salve o comentário no banco de dados
+        comment.save()
+    return render(
+        request,
+        'blog/post/comment.html',
+        {
+            'post': post,
+            'form': form,
+            'comment': comment
         }
     )
