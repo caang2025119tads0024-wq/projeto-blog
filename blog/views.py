@@ -1,25 +1,26 @@
 from django.core.paginator import EmptyPage,Paginator, PageNotAnInteger 
+from django.core.mail import send_mail
 from django.shortcuts import get_object_or_404, render
 from django.views.decorators.http import require_POST
 from django.http import Http404
 from django.views.generic import ListView
+
 from .forms import EmailPostForm, CommentForm
-from django.core.mail import send_mail
 from .models import Post
 
 # Create your views here.
-
+"""
 class PostListView(ListView):
-    """
+    
     Visualização alternativa da lista de posts
-    """
+    
     queryset = Post.published.all()
     context_object_name = 'posts'
     paginate_by = 3
     template_name = 'blog/post/list.html'
-    
-
 """
+
+
 def post_list(request):
     post_list = Post.published.all()
     # Paginação com 3 posts por página
@@ -39,7 +40,7 @@ def post_list(request):
         'blog/post/list.html',
         {'posts':posts}
     )
-"""
+
 
 
 def post_detail(request, year, month, day, post):
