@@ -1,0 +1,460 @@
+[
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1500000$y6CDERuPU6vwCGClh7Ncdp$mqPhPqTVs61hdM2jzdKcT3naye4m4ux0xCfGiN4v8vo=",
+    "last_login": "2026-10-02T13:18:34.363Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "dg3076691dani@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-10-02T13:17:39.734Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sites.site",
+  "fields": {
+    "domain": "localhost:8000",
+    "name": "localhost:8000"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 1,
+  "fields": {
+    "name": "music",
+    "slug": "music"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 2,
+  "fields": {
+    "name": "jazz",
+    "slug": "jazz"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 3,
+  "fields": {
+    "name": "django",
+    "slug": "django"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 4,
+  "fields": {
+    "name": "teste",
+    "slug": "teste"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 5,
+  "fields": {
+    "name": "markdown",
+    "slug": "markdown"
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 1,
+  "fields": {
+    "tag": 1,
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": 1
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 2,
+  "fields": {
+    "tag": 2,
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": 1
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 4,
+  "fields": {
+    "tag": 1,
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": 2
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 5,
+  "fields": {
+    "tag": 2,
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": 2
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 6,
+  "fields": {
+    "tag": 2,
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": 3
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 8,
+  "fields": {
+    "tag": 5,
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": 5
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 1,
+  "fields": {
+    "title": "consequatur culpa",
+    "slug": "consequatur-culpa",
+    "author": [
+      "admin"
+    ],
+    "body": "Lorem ipsum dolor sit amet. Ut officiis accusamus quo facilis voluptatem et quia vero a eveniet voluptas ut rerum libero ex modi aperiam qui nobis ratione. 33 eius illo ut corrupti perspiciatis et architecto nesciunt eum earum consequatur et mollitia nisi?",
+    "publish": "2026-10-02T13:18:37Z",
+    "created": "2026-10-02T13:20:09.262Z",
+    "updated": "2026-10-02T13:20:09.262Z",
+    "status": "PB"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 2,
+  "fields": {
+    "title": "quisquam dolores",
+    "slug": "quisquam-dolores",
+    "author": [
+      "admin"
+    ],
+    "body": "Lorem ipsum dolor sit amet. Non blanditiis accusamus qui similique dolor qui omnis labore in excepturi minima aut quasi dolores ea libero aspernatur sit ipsam officia. Ut quisquam dolores vel fuga alias a maxime nisi. Et dolorem consequuntur est nesciunt quia non officiis velit est rerum quia et suscipit velit. Qui saepe natus et dolores sint et minima eveniet hic porro internos.",
+    "publish": "2026-10-02T13:20:12Z",
+    "created": "2026-10-02T13:20:47.591Z",
+    "updated": "2026-10-09T18:23:22.088Z",
+    "status": "PB"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 3,
+  "fields": {
+    "title": "Qui reiciendis",
+    "slug": "qui-reiciendis",
+    "author": [
+      "admin"
+    ],
+    "body": "Lorem ipsum dolor sit amet. Qui reiciendis assumenda ut laboriosam pariatur At ipsum omnis. Et iure enim qui beatae dicta hic laudantium rerum ea autem explicabo hic perspiciatis asperiores ut mollitia natus.",
+    "publish": "2026-10-02T13:21:08Z",
+    "created": "2026-10-02T13:21:26.349Z",
+    "updated": "2026-10-09T18:24:14.020Z",
+    "status": "PB"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 4,
+  "fields": {
+    "title": "Ut libero maiores",
+    "slug": "ut-libero-maiores",
+    "author": [
+      "admin"
+    ],
+    "body": "Lorem ipsum dolor sit amet. Et dicta cumque aut reiciendis sequi rem omnis sapiente vel voluptas dolor non aperiam alias et maiores voluptatem. Ut libero maiores a reiciendis quia est nobis labore aut internos dolore At cumque repudiandae. Et temporibus debitis et rerum quia non soluta iste et corporis quia ut voluptatem itaque.",
+    "publish": "2026-10-02T13:21:31Z",
+    "created": "2026-10-02T13:21:57.019Z",
+    "updated": "2026-10-02T13:21:57.019Z",
+    "status": "PB"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 5,
+  "fields": {
+    "title": "Markdown post",
+    "slug": "markdown-post",
+    "author": [
+      "admin"
+    ],
+    "body": "Este é um post formatado com markdown\r\n-----------------------------------------------\r\n\r\n*Isto é enfatizado* and **isso está mais enfatizado.**\r\n\r\nAqui está uma lista:\r\n\r\n* Um\r\n* Dois \r\n* Tres\r\n\r\nAnd a [link para o site do Django](https://www.djangoproject.com/).",
+    "publish": "2026-10-16T12:36:25Z",
+    "created": "2026-10-16T12:42:23.872Z",
+    "updated": "2026-10-16T12:44:22.998Z",
+    "status": "PB"
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 1,
+  "fields": {
+    "post": 4,
+    "name": "daniel",
+    "email": "dg3076691dani@mail.com",
+    "body": "gostei muito da sua postagem",
+    "created": "2026-10-08T19:53:05.442Z",
+    "updated": "2026-10-08T19:56:39.889Z",
+    "active": false
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 2,
+  "fields": {
+    "post": 4,
+    "name": "daniel",
+    "email": "dg3076691@gmail.com",
+    "body": "ola eu de novo",
+    "created": "2026-10-08T19:55:15.538Z",
+    "updated": "2026-10-08T19:55:15.538Z",
+    "active": true
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2026-10-02T13:20:09.266Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": "1",
+    "object_repr": "consequatur culpa",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2026-10-02T13:20:47.603Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": "2",
+    "object_repr": "quisquam dolores",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2026-10-02T13:21:26.359Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": "3",
+    "object_repr": "Qui reiciendis",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2026-10-02T13:21:57.025Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": "4",
+    "object_repr": "Ut libero maiores",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2026-10-08T19:56:39.906Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "comment"
+    ],
+    "object_id": "1",
+    "object_repr": "Comment object (1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Active\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2026-10-09T18:22:35.439Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": "2",
+    "object_repr": "quisquam dolores",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tags\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2026-10-09T18:23:22.139Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": "2",
+    "object_repr": "quisquam dolores",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tags\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2026-10-09T18:24:05.940Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": "3",
+    "object_repr": "Qui reiciendis",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tags\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2026-10-09T18:24:14.055Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": "3",
+    "object_repr": "Qui reiciendis",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2026-10-16T12:42:24.050Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": "5",
+    "object_repr": "teste da formatação do markdown",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2026-10-16T12:44:23.096Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": "5",
+    "object_repr": "Markdown post",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tags\", \"Title\", \"Slug\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2026-10-16T13:07:19.478Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "sites",
+      "site"
+    ],
+    "object_id": "1",
+    "object_repr": "localhost:8000",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Domain name\", \"Display name\"]}}]"
+  }
+}
+]
