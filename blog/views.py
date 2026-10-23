@@ -10,7 +10,8 @@ from taggit.models import Tag
 from django.contrib.postgres.search import (
     SearchVector,
     SearchQuery,
-    SearchRank
+    SearchRank,
+    TrigramSimilarity
     )
 from .forms import EmailPostForm, CommentForm, SearchForm
 from .models import Post
@@ -178,10 +179,12 @@ def post_search(request):
             search_query = SearchQuery(query, config='portuguese')
             results = (
                 Post.published.annotate(
-                search=search_vector,
-                rank=SearchRank(search_vector, search_query)
-            ).filter(rank_gte=0.3).order_by('-rank')   
+                #search=search_vector,
+                #rank=SearchRank(search_vector, search_query)
+                similarity=TrigramSimilarity('title', query) 
+            ).filter(similarity__gt=0.1).order_by('-similarity')   
             # filter(search=search_query) 
+            # filter(rank_gte=0.3).order_by('-rank')
         )
             
     return render(
